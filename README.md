@@ -17,13 +17,14 @@ kubectl create namespace apic-control #if not exisiting
 ## Run the Init
 ```Shell
 # If you specify gatewayHost (Optional), a self signed certificate will be created for your gateway Host.
-helm install https://github.com/asayah/Axway-Amplify-Mesh-Init/releases/download/0.1/Axway-Amplify-Mesh-Init-0.1.0.tgz --set gatewayHost=foo.com
+helm install https://github.com/Axway/Axway-Amplify-Mesh-Init/releases/download/1.1/Axway-Amplify-Mesh-Init-1.1.tar.gz --set gatewayHost=foo.com
+
 ```
 
 ## Run the init (Form github Repo)
 
 ```Shell
-git clone https://github.com/asayah/Axway-Amplify-Mesh-Init
+git clone https://github.com/Axway/Axway-Amplify-Mesh-Init
 # If you specify gatewayHost (Optional), a self signed certificate will be created for your gateway Host. 
 helm install . -n apic-init --set gatewayHost=example.com
 ```
@@ -34,7 +35,7 @@ helm install . -n apic-init --set gatewayHost=example.com
 kubectl create namespace foo
 kubectl create namespace bar
 # If you specify gatewayHost (Optional), a self signed certificate will be created for your gateway Host. 
-helm install https://github.com/asayah/Axway-Amplify-Mesh-Init/releases/download/0.1/Axway-Amplify-Mesh-Init-0.1.0.tgz -n apic-init --set gatewayHost=example.com --set apic.namespace=foo --set istio.namespace=bar
+helm install https://github.com/Axway/Axway-Amplify-Mesh-Init/releases/download/1.1/Axway-Amplify-Mesh-Init-1.1.tar.gz -n apic-init --set gatewayHost=example.com --set apic.namespace=foo --set istio.namespace=bar
 ```
 
 Learn more about managing your mesh using Axway Amplify Central: https://github.com/Axway/Setup-Amplify-Mesh-Governance/wiki 
